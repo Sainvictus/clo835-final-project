@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Information</title>
+    <style>
+        body {
+            background-image: url('/static/{{ background_image }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 50px auto;
+            max-width: 600px;
+        }
+        .header {
+            text-align: center;
+            padding: 10px;
+            background-color: #0066cc;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .slogan {
+            font-style: italic;
+            margin-top: 5px;
+        }
+        .employee-info {
+            margin: 20px 0;
+        }
+        .info-row {
+            margin: 10px 0;
+        }
+        .info-label {
+            font-weight: bold;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #0066cc;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <h1>{{ group_name }}</h1>
+            <p class="slogan">{{ group_slogan }}</p>
+            <h2>Employee Information</h2>
+        </div>
+
+        <div class="employee-info">
+            <div class="info-row">
+                <span class="info-label">Employee ID:</span> {{ id }}
+            </div>
+            <div class="info-row">
+                <span class="info-label">First Name:</span> {{ fname }}
+            </div>
+            <div class="info-row">
+                <span class="info-label">Last Name:</span> {{ lname }}
+            </div>
+            <div class="info-row">
+                <span class="info-label">Primary Interest:</span> {{ interest }}
+            </div>
+            <div class="info-row">
+                <span class="info-label">Location:</span> {{ location }}
+            </div>
+        </div>
+        
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>

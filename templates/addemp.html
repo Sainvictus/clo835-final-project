@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Employee Information</title>
+    <style>
+        body {
+            background-image: url('/static/{{ background_image }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 50px auto;
+            max-width: 600px;
+        }
+        .header {
+            text-align: center;
+            padding: 10px;
+            background-color: #0066cc;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .slogan {
+            font-style: italic;
+            margin-top: 5px;
+        }
+        input {
+            height: 25px;
+            font-size: 14pt;
+            color: grey;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button {
+            background: grey;
+            height: 45px;
+            width: 200px;
+            color: white;
+            font-style: oblique;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <h1>{{ group_name }}</h1>
+            <p class="slogan">{{ group_slogan }}</p>
+            <h2>Employee Database</h2>
+        </div>
+
+        <form action="/addemp" autocomplete="on" method="POST" enctype="multipart/form-data">
+            Employee ID:<br> <input type="number" name="emp_id" autofocus><br>
+            First Name:<br> <input type="text" name="first_name"><br>
+            Last Name:<br> <input type="text" name="last_name"><br>
+            Primary Skills:<br> <input type="text" name="primary_skill"><br>
+            Location:<br> <input type="text" name="location"><br>
+
+            <button type="submit">UPDATE DATABASE</button><br>
+            <button type="submit" formaction="/getemp">GET EMPLOYEE INFORMATION</button><br>
+        </form>
+        
+        <a href="/about">About Us</a>
+    </div>
+</body>
+</html>

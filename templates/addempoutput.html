@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Employee Output</title>
+    <style>
+        body {
+            background-image: url('/static/{{ background_image }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 50px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+        .header {
+            padding: 10px;
+            background-color: #0066cc;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .slogan {
+            font-style: italic;
+            margin-top: 5px;
+        }
+        h2 {
+            color: #0066cc;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <h1>{{ group_name }}</h1>
+            <p class="slogan">{{ group_slogan }}</p>
+        </div>
+
+        <h2>The employee {{ name }} was successfully added to the database</h2>
+        <h3>Employee Details:</h3>
+        <p>{{ name }}</p>
+        
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
